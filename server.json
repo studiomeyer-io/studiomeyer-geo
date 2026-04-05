@@ -1,0 +1,8 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.studiomeyer/geo",
+  "title": "StudioMeyer GEO",
+  "description": "AI visibility monitoring with 12 tools. Check how ChatGPT, Gemini, Perplexity, and Claude see your brand. Discovery stack audit, robots.txt AI-bot matrix, entity consistency, content freshness.",
+  "version": "1.0.0",
+  "remotes": [{ "type": "streamable-http", "url": "https://geo.studiomeyer.io/mcp" }]
+}
