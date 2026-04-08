@@ -3,6 +3,8 @@
 > AI visibility monitoring across 8 LLM platforms. 23 MCP tools + 5 expert workflows. Free tier: 19 tools without API keys.
 
 [![MCP Registry](https://img.shields.io/badge/MCP-Registry-blue)](https://registry.modelcontextprotocol.io/servers/io.studiomeyer/geo)
+[![MCPize](https://img.shields.io/badge/MCPize-Marketplace-purple)](https://mcpize.com/mcp/studiomeyer-geo)
+[![Glama](https://glama.ai/mcp/servers/studiomeyer-io/studiomeyer-geo/badges/score.svg)](https://glama.ai/mcp/servers/studiomeyer-io/studiomeyer-geo)
 
 ## What is this?
 
@@ -109,7 +111,7 @@ Rating: 80+ excellent · 65+ good · 40+ needs improvement · 20+ weak · <20 cr
 ## Pricing
 
 | Plan | Price | Includes |
-|------|-------|----------|
+|------|-------|---------|
 | **Free** | €0 | 23 tools, 8 platforms, hosted MCP, OAuth 2.1 |
 | **Pro** | €49/mo | History, trends, scheduled checks, alerts, PDF reports |
 | **Team** | €99/mo | Multi-brand dashboard, agency features, bulk checks |
@@ -153,4 +155,5 @@ Then use `/geo_track_over_time` — Claude stores results in Memory and shows tr
 
 ## License
 
-Proprietary. Free tier available. See [Terms of Service](https://studiomeyer.io/terms).
+MIT — see [LICENSE](LICENSE). This repository contains documentation only.
+The GEO server is hosted at [geo.studiomeyer.io](https://geo.studiomeyer.io).
