@@ -21,6 +21,7 @@ Settings → Connectors → Add URL:
 ```
 https://geo.studiomeyer.io/mcp
 ```
+You'll receive a sign-in link via email to verify your identity — no passwords needed.
 
 ### Claude Code
 ```bash
@@ -117,6 +118,15 @@ Rating: 80+ excellent · 65+ good · 40+ needs improvement · 20+ weak · <20 cr
 | **Team** | €99/mo | Multi-brand dashboard, agency features, bulk checks |
 | **Managed Monitoring** | €499/mo | Monthly executive report + quarterly strategy call |
 | **Full GEO Service** | €999 + €299/mo | Done-for-you consulting + implementation |
+
+## Security
+
+- **Magic Link Authentication** — email verification on every sign-in. No passwords stored. You receive a single-use link that expires in 10 minutes. Nobody can access your data without proving email ownership.
+- **OAuth 2.1** with PKCE S256 — latest authentication standard
+- **Cloudflare Proxy** — DDoS protection, WAF, SSL termination
+- **Rate Limiting** — per-token (30 req/min) and per-endpoint
+- **SSRF Protection** — IP encoding bypass prevention, per-hop redirect validation
+- **Docker Hardened** — non-root user, read-only filesystem, cap_drop ALL
 
 ## Example: Quick Audit
 
