@@ -2,7 +2,7 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.studiomeyer/geo",
   "title": "StudioMeyer GEO",
-  "description": "AI visibility monitoring with 23 tools + 5 expert workflows. Check how 8 LLM platforms (ChatGPT, Gemini, Perplexity, Claude, Grok, DeepSeek, Meta AI, Copilot) see your brand. 19 tools free without API keys. Magic Link email verification — no passwords. EU hosted (Frankfurt).",
-  "version": "2.0.3",
+  "description": "AI visibility monitoring with 24 tools + 5 expert workflows. Check how 8 LLM platforms (ChatGPT, Gemini, Perplexity, Claude, Grok, DeepSeek, Meta AI, Copilot) see your brand. Page-type-aware content audit, sitemap-first content freshness, entity consistency with email/URL/domain masking, retrieval quality (text-to-HTML, JS dependency, canonical chains), hallucination guard. 20 tools free without API keys. Magic Link email verification — no passwords. EU hosted (Frankfurt).",
+  "version": "2.0.4",
   "remotes": [{ "type": "streamable-http", "url": "https://geo.studiomeyer.io/mcp" }]
 }
