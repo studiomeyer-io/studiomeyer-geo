@@ -1,6 +1,6 @@
 # StudioMeyer GEO
 
-> AI visibility monitoring across 8 LLM platforms. 23 MCP tools + 5 expert workflows. Free tier: 19 tools without API keys.
+> AI visibility monitoring across 8 LLM platforms. 24 MCP tools + 5 expert workflows. Free tier: 20 tools without API keys.
 
 [![MCP Registry](https://img.shields.io/badge/MCP-Registry-blue)](https://registry.modelcontextprotocol.io/servers/io.studiomeyer/geo)
 [![MCPize](https://img.shields.io/badge/MCPize-Marketplace-purple)](https://mcpize.com/mcp/studiomeyer-geo)
@@ -10,9 +10,9 @@
 
 StudioMeyer GEO checks how visible your brand is to AI assistants — across **ChatGPT, Gemini, Perplexity, Claude, Grok, DeepSeek, Meta AI, and Copilot**. Instead of guessing, you get concrete scores, citations, and actionable fixes.
 
-**23 expert tools** for AI visibility checks, discovery stack audits, robots.txt analysis, JSON-LD validation, entity consistency, content freshness, GEO score simulation, citation source analysis, content audits (based on KDD 2024 GEO paper), competitor comparison, and historical trend tracking.
+**24 expert tools** for AI visibility checks, discovery stack audits, robots.txt analysis, JSON-LD validation, entity consistency, sitemap-first content freshness, page-type-aware content audits (KDD 2024 GEO paper), retrieval quality (text-to-HTML ratio + JS dependency + canonical chains), GEO score simulation, citation source analysis, schema generation, hallucination guard for LLM-derived facts, competitor comparison, and historical trend tracking.
 
-**19 of 23 tools work without any LLM API key** — zero-cost onboarding.
+**20 of 24 tools work without any LLM API key** — zero-cost onboarding.
 
 ## Connect in 10 Seconds
 
@@ -33,7 +33,7 @@ claude mcp add --transport http geo https://geo.studiomeyer.io/mcp
 npx mcp-remote https://geo.studiomeyer.io/mcp
 ```
 
-## Tools (23)
+## Tools (24)
 
 ### Base Tools (7)
 | Tool | Description | API Key |
@@ -43,21 +43,22 @@ npx mcp-remote https://geo.studiomeyer.io/mcp
 | `geo_calculate_score` | Pure scoring function from raw data | No |
 | `geo_platforms` | LLM platform readiness check (8 platforms) | No |
 | `geo_preview_prompts` | Preview prompts without making API calls | No |
-| `geo_analyze_response` | Parse a single LLM response for brand mentions | No |
+| `geo_analyze_response` | Parse a single LLM response for brand mentions. Optional hallucination guard (`verifyUrls`, `extractClaims`, `claimsReference`) cross-checks LLM-cited URLs against the real web and tags numeric claims as verified / refuted / unverified. | No |
 | `geo_recommendations` | Generate actionable recommendations from scores | No |
 
-### Specialist Tools (9)
+### Specialist Tools (10)
 | Tool | Description | API Key |
 |------|-------------|:---:|
 | `geo_robots_audit` | Deep robots.txt analysis with 14-AI-bot matrix | No |
 | `geo_llms_txt_validate` | Validate llms.txt against llmstxt.org spec with link checking | No |
 | `geo_json_ld_audit` | Extract and audit JSON-LD structured data | No |
-| `geo_entity_consistency` | Scan for brand name variants (fragmented = 2.8x fewer AI citations) | No |
-| `geo_content_freshness` | Check Last-Modified, og:modified_time, schema dateModified | No |
+| `geo_entity_consistency` | Scan for brand name variants. Masks emails, URLs, and bare brand-domain refs before matching, so `ahoi@example.com` is not counted as a variant. Fragmented entities = 2.8x fewer AI citations. | No |
+| `geo_content_freshness` | Sitemap-first freshness audit. Reads robots.txt, walks sitemap_index, scores top-N URLs by lastmod + Last-Modified + og:modified_time + schema dateModified. Hardcoded i18n paths only as last-resort fallback. | No |
 | `geo_simulate` | Estimate GEO score without API keys (~30s, free) | No |
 | `geo_schema_generator` | Generate missing JSON-LD blocks ready to paste | No |
 | `geo_citation_sources` | Citability score: authority links, stats, sameAs, quotes | No |
-| `geo_content_audit` | Deep single-page GEO audit, 10 dimensions (KDD 2024 paper) | No |
+| `geo_content_audit` | Page-type-aware deep content audit. Detects homepage / blog post / product / local business / about / profile / service / category / contact via JSON-LD `@type` (with URL-pattern fallback) and applies a tailored weighting profile per type. Based on KDD 2024 GEO paper. | No |
+| `geo_retrieval_quality` | Static crawler-readiness audit (no headless browser). Text-to-HTML ratio, visible-text length, JS-required markers (DE+EN), `<noscript>` fallback, meta refresh, canonical mismatch, redirect chain depth via HEAD probe. Score 0..100 + issues. | No |
 
 ### Comparison + Agency Tools (3)
 | Tool | Description | Tier |
@@ -100,7 +101,7 @@ Rating: 80+ excellent · 65+ good · 40+ needs improvement · 20+ weak · <20 cr
 
 | Feature | Ahrefs Brand Radar | Profound | Peec AI | Otterly | **StudioMeyer GEO** |
 |---------|:---:|:---:|:---:|:---:|:---:|
-| Free tier | — | — | — | — | **19 tools** |
+| Free tier | — | — | — | — | **20 tools** |
 | LLM platforms | 6 | 10+ | 4 | 6 | **8** |
 | MCP native | — | — | — | — | **Yes** |
 | Discovery Stack depth | — | — | — | — | **Yes** |
@@ -113,7 +114,7 @@ Rating: 80+ excellent · 65+ good · 40+ needs improvement · 20+ weak · <20 cr
 
 | Plan | Price | Includes |
 |------|-------|---------|
-| **Free** | €0 | 23 tools, 8 platforms, hosted MCP, OAuth 2.1 |
+| **Free** | €0 | 24 tools, 8 platforms, hosted MCP, OAuth 2.1 |
 | **Pro** | €49/mo | History, trends, scheduled checks, alerts, PDF reports |
 | **Team** | €99/mo | Multi-brand dashboard, agency features, bulk checks |
 | **Managed Monitoring** | €499/mo | Monthly executive report + quarterly strategy call |
@@ -133,13 +134,14 @@ Rating: 80+ excellent · 65+ good · 40+ needs improvement · 20+ weak · <20 cr
 ```
 You: /geo_quick_wins url=https://example.com
 
-Claude runs 9 API-free specialist checks:
+Claude runs 10 API-free specialist checks:
   ✓ robots.txt AI-bot audit (14 bots)
   ✓ llms.txt validation
   ✓ JSON-LD structured data audit
-  ✓ Entity consistency scan
-  ✓ Content freshness check
-  ✓ Discovery stack completeness
+  ✓ Entity consistency scan (with email/URL/domain mask)
+  ✓ Content freshness (sitemap-first)
+  ✓ Page-type-aware content audit
+  ✓ Retrieval quality (text-to-HTML, JS dependency, canonical chain)
   ✓ Citation source analysis
   ✓ GEO score simulation
   ✓ Schema generator (missing blocks)
@@ -162,6 +164,19 @@ Then use `/geo_track_over_time` — Claude stores results in Memory and shows tr
 - Landing page: [studiomeyer.io/services/geo-mcp](https://studiomeyer.io/en/services/geo-mcp)
 - Email: hello@studiomeyer.io
 - Built by [StudioMeyer](https://studiomeyer.io) — AI agency from Spain
+
+## What's New
+
+**2026-04-13 — v2.0.4 (Benny Windolph Feedback Wave)**
+
+Six fixes shipped after detailed feedback from a DACH SEO professional:
+
+1. **Page-type-aware content audit** — `detectPageType()` (JSON-LD `@type` first, URL-pattern fallback) plus per-type weighting profile. A homepage isn't judged on expert quotes or author attribution any more.
+2. **Sitemap-first content freshness** — reads robots.txt, walks sitemap_index recursively, scores real URLs by lastmod. Hardcoded i18n paths only as last-resort fallback.
+3. **Entity consistency mask** — emails, absolute URLs, and bare brand-domain references are masked before matching. Fixes the `ahoi@example.com` false-positive.
+4. **New `geo_retrieval_quality` specialist** — static crawler-readiness audit (no headless browser).
+5. **Hallucination guard helpers** — wired into `geo_analyze_response` as opt-in parameters.
+6. **Default LLM models bumped off the smallest tier** — `gpt-5-mini` (chatgpt), `claude-sonnet-4-5` (claude), `gemini-2.5-flash` (gemini). The smallest tiers had weaker entity recall and one was silently rejecting calls.
 
 ## License
 
