@@ -1,3 +1,7 @@
+<!-- studiomeyer-mcp-stack-banner:start -->
+> **Part of the [StudioMeyer MCP Stack](https://studiomeyer.io)** — Built in Mallorca 🌴 · ⭐ if you use it
+<!-- studiomeyer-mcp-stack-banner:end -->
+
 # StudioMeyer GEO
 
 > AI visibility monitoring across 8 LLM platforms. 24 MCP tools + 5 expert workflows. Free tier: 20 tools without API keys.
