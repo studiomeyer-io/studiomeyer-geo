@@ -4,6 +4,8 @@
 
 # StudioMeyer GEO
 
+[![smithery badge](https://smithery.ai/badge/cod-gb2l/StudioMeyer-GEO)](https://smithery.ai/servers/cod-gb2l/StudioMeyer-GEO)
+
 > AI visibility monitoring across 8 LLM platforms. 24 MCP tools + 5 expert workflows. Free tier: 20 tools without API keys.
 
 [![MCP Registry](https://img.shields.io/badge/MCP-Registry-blue)](https://registry.modelcontextprotocol.io/servers/io.studiomeyer/geo)
