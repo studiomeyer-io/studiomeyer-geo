@@ -182,6 +182,10 @@ Six fixes shipped after detailed feedback from a DACH SEO professional:
 5. **Hallucination guard helpers** — wired into `geo_analyze_response` as opt-in parameters.
 6. **Default LLM models bumped off the smallest tier** — `gpt-5-mini` (chatgpt), `claude-sonnet-4-5` (claude), `gemini-2.5-flash` (gemini). The smallest tiers had weaker entity recall and one was silently rejecting calls.
 
+## About StudioMeyer
+
+[StudioMeyer](https://studiomeyer.io) is an AI and design studio from Palma de Mallorca, building custom websites and AI infrastructure for small and medium businesses. Production stack on Claude Agent SDK, MCP, n8n and an in-house observability and guard layer.
+
 ## License
 
 MIT — see [LICENSE](LICENSE). This repository contains documentation only.
