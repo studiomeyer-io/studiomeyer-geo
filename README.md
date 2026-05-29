@@ -6,7 +6,7 @@
 
 [![smithery badge](https://smithery.ai/badge/cod-gb2l/StudioMeyer-GEO)](https://smithery.ai/servers/cod-gb2l/StudioMeyer-GEO)
 
-> AI visibility monitoring across 8 LLM platforms. 24 MCP tools + 5 expert workflows. Free tier: 20 tools without API keys.
+> AI visibility monitoring across 8 LLM platforms. 25 MCP tools + 5 expert workflows. Free tier: 20 tools without API keys.
 
 [![MCP Registry](https://img.shields.io/badge/MCP-Registry-blue)](https://registry.modelcontextprotocol.io/servers/io.studiomeyer/geo)
 [![MCPize](https://img.shields.io/badge/MCPize-Marketplace-purple)](https://mcpize.com/mcp/studiomeyer-geo)
@@ -26,9 +26,9 @@ From a small studio in Palma de Mallorca.
 
 StudioMeyer GEO checks how visible your brand is to AI assistants — across **ChatGPT, Gemini, Perplexity, Claude, Grok, DeepSeek, Meta AI, and Copilot**. Instead of guessing, you get concrete scores, citations, and actionable fixes.
 
-**24 expert tools** for AI visibility checks, discovery stack audits, robots.txt analysis, JSON-LD validation, entity consistency, sitemap-first content freshness, page-type-aware content audits (KDD 2024 GEO paper), retrieval quality (text-to-HTML ratio + JS dependency + canonical chains), GEO score simulation, citation source analysis, schema generation, hallucination guard for LLM-derived facts, competitor comparison, and historical trend tracking.
+**25 expert tools** for AI visibility checks, discovery stack audits, robots.txt analysis, JSON-LD validation, entity consistency, sitemap-first content freshness, page-type-aware content audits (KDD 2024 GEO paper), retrieval quality (text-to-HTML ratio + JS dependency + canonical chains), GEO score simulation, citation source analysis, schema generation, hallucination guard for LLM-derived facts, competitor comparison, and historical trend tracking.
 
-**20 of 24 tools work without any LLM API key** — zero-cost onboarding.
+**20 of 25 tools work without any LLM API key** — zero-cost onboarding.
 
 ## Connect in 10 Seconds
 
@@ -49,7 +49,7 @@ claude mcp add --transport http geo https://geo.studiomeyer.io/mcp
 npx mcp-remote https://geo.studiomeyer.io/mcp
 ```
 
-## Tools (24)
+## Tools (25)
 
 ### Base Tools (7)
 | Tool | Description | API Key |
@@ -62,7 +62,7 @@ npx mcp-remote https://geo.studiomeyer.io/mcp
 | `geo_analyze_response` | Parse a single LLM response for brand mentions. Optional hallucination guard (`verifyUrls`, `extractClaims`, `claimsReference`) cross-checks LLM-cited URLs against the real web and tags numeric claims as verified / refuted / unverified. | No |
 | `geo_recommendations` | Generate actionable recommendations from scores | No |
 
-### Specialist Tools (10)
+### Specialist Tools (11)
 | Tool | Description | API Key |
 |------|-------------|:---:|
 | `geo_robots_audit` | Deep robots.txt analysis with 14-AI-bot matrix | No |
@@ -75,6 +75,7 @@ npx mcp-remote https://geo.studiomeyer.io/mcp
 | `geo_citation_sources` | Citability score: authority links, stats, sameAs, quotes | No |
 | `geo_content_audit` | Page-type-aware deep content audit. Detects homepage / blog post / product / local business / about / profile / service / category / contact via JSON-LD `@type` (with URL-pattern fallback) and applies a tailored weighting profile per type. Based on KDD 2024 GEO paper. | No |
 | `geo_retrieval_quality` | Static crawler-readiness audit (no headless browser). Text-to-HTML ratio, visible-text length, JS-required markers (DE+EN), `<noscript>` fallback, meta refresh, canonical mismatch, redirect chain depth via HEAD probe. Score 0..100 + issues. | No |
+| `geo_dashboard_view` | Interactive visibility dashboard (MCP Apps): score wheel with confidence range, 8-LLM heatmap, citation drift, conversation sankey, recommendations. Renders existing check data. | No |
 
 ### Comparison + Agency Tools (3)
 | Tool | Description | Tier |
@@ -130,9 +131,15 @@ Rating: 80+ excellent · 65+ good · 40+ needs improvement · 20+ weak · <20 cr
 
 | Plan | Price | Includes |
 |------|-------|---------|
+<<<<<<< HEAD
 | **Free** | €0 | 24 tools, 8 platforms, hosted MCP, OAuth 2.1 |
 | **Pro** | €49/mo *(coming soon)* | History, trends, scheduled checks, alerts, PDF reports |
 | **Team** | €99/mo *(coming soon)* | Multi-brand dashboard, agency features, bulk checks |
+=======
+| **Free** | €0 | 25 tools, 8 platforms, hosted MCP, OAuth 2.1 |
+| **Pro** | €49/mo | History, trends, scheduled checks, alerts, PDF reports |
+| **Team** | €99/mo | Multi-brand dashboard, agency features, bulk checks |
+>>>>>>> 98926b0 (docs(readme): GEO tool count 24 -> 25 (v2.5.0 live), add geo_dashboard_view row)
 | **Managed Monitoring** | €499/mo | Monthly executive report + quarterly strategy call |
 | **Full GEO Service** | €999 + €299/mo | Done-for-you consulting + implementation |
 
