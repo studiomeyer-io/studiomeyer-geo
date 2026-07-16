@@ -6,7 +6,7 @@
 
 [![smithery badge](https://smithery.ai/badge/cod-gb2l/StudioMeyer-GEO)](https://smithery.ai/servers/cod-gb2l/StudioMeyer-GEO)
 
-> AI visibility monitoring across 8 LLM platforms. 28 MCP tools + 5 expert workflows. Free tier: 21 tools without API keys.
+> AI visibility monitoring across 8 LLM platforms. 30 MCP tools + 5 expert workflows. Free tier: most tools work without any LLM API key.
 
 [![MCP Registry](https://img.shields.io/badge/MCP-Registry-blue)](https://registry.modelcontextprotocol.io/servers/io.studiomeyer/geo)
 [![MCPize](https://img.shields.io/badge/MCPize-Marketplace-purple)](https://mcpize.com/mcp/studiomeyer-geo)
@@ -28,7 +28,7 @@ StudioMeyer GEO checks how visible your brand is to AI assistants — across **C
 
 **28 expert tools** for AI visibility checks, discovery stack audits, robots.txt analysis, JSON-LD validation, entity consistency, sitemap-first content freshness, page-type-aware content audits (KDD 2024 GEO paper), retrieval quality (text-to-HTML ratio + JS dependency + canonical chains), GEO score simulation, citation source analysis, schema generation, hallucination guard for LLM-derived facts, citation-source provenance (which domains the 8 LLMs actually cite you from), prompt-level competitor-gap reports, AI-crawler access-log analysis (which AI bots crawl you, and whether you're blocking them), competitor comparison, and historical trend tracking.
 
-**21 of 28 tools work without any LLM API key** — zero-cost onboarding.
+**Most of the 30 tools work without any LLM API key** — zero-cost onboarding.
 
 ## Connect in 10 Seconds
 
@@ -127,7 +127,7 @@ Rating: 80+ excellent · 65+ good · 40+ needs improvement · 20+ weak · <20 cr
 
 | Feature | Ahrefs Brand Radar | Profound | Peec AI | Otterly | **StudioMeyer GEO** |
 |---------|:---:|:---:|:---:|:---:|:---:|
-| Free tier | — | — | — | — | **21 tools** |
+| Free tier | — | — | — | — | **most tools** |
 | LLM platforms | 6 | 10+ | 4 | 6 | **8** |
 | MCP native | — | — | — | — | **Yes** |
 | Discovery Stack depth | — | — | — | — | **Yes** |
@@ -144,7 +144,7 @@ Rating: 80+ excellent · 65+ good · 40+ needs improvement · 20+ weak · <20 cr
 
 | Plan | Price | Includes |
 |------|-------|---------|
-| **Free** | €0 | 28 tools, 8 platforms, hosted MCP, OAuth 2.1 |
+| **Free** | €0 | 30 tools, 8 platforms, hosted MCP, OAuth 2.1 |
 | **Pro** | €49/mo *(coming soon)* | History, trends, scheduled checks, alerts, PDF reports |
 | **Team** | €99/mo *(coming soon)* | Multi-brand dashboard, agency features, bulk checks |
 | **Managed Monitoring** | €499/mo | Monthly executive report + quarterly strategy call |
