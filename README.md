@@ -145,10 +145,9 @@ Rating: 80+ excellent · 65+ good · 40+ needs improvement · 20+ weak · <20 cr
 | Plan | Price | Includes |
 |------|-------|---------|
 | **Free** | €0 | 30 tools, 8 platforms, hosted MCP, OAuth 2.1 |
-| **Pro** | €49/mo *(coming soon)* | History, trends, scheduled checks, alerts, PDF reports |
-| **Team** | €99/mo *(coming soon)* | Multi-brand dashboard, agency features, bulk checks |
-| **Managed Monitoring** | €499/mo | Monthly executive report + quarterly strategy call |
-| **Full GEO Service** | €999 + €299/mo | Done-for-you consulting + implementation |
+| **Pro** | in preparation | History, trends, scheduled checks, alerts, PDF reports |
+| **Team** | in preparation | Multi-brand dashboard, agency features, bulk checks |
+| **GEO Service** | on request | Done-for-you consulting + implementation by the StudioMeyer agency |
 
 Currently the **Free** self-service tier and the two managed services (**Managed Monitoring**, **Full GEO Service**) are available. The **Pro** and **Team** self-service tiers launch shortly — sign up for Free now and you keep your data when they ship.
 
