@@ -26,7 +26,7 @@ From a small studio in Palma de Mallorca.
 
 StudioMeyer GEO checks how visible your brand is to AI assistants — across **ChatGPT, Gemini, Perplexity, Claude, Grok, DeepSeek, Meta AI, and Copilot**. Instead of guessing, you get concrete scores, citations, and actionable fixes.
 
-**28 expert tools** for AI visibility checks, discovery stack audits, robots.txt analysis, JSON-LD validation, entity consistency, sitemap-first content freshness, page-type-aware content audits (KDD 2024 GEO paper), retrieval quality (text-to-HTML ratio + JS dependency + canonical chains), GEO score simulation, citation source analysis, schema generation, hallucination guard for LLM-derived facts, citation-source provenance (which domains the 8 LLMs actually cite you from), prompt-level competitor-gap reports, AI-crawler access-log analysis (which AI bots crawl you, and whether you're blocking them), competitor comparison, and historical trend tracking.
+**30 expert tools** for AI visibility checks, discovery stack audits, robots.txt analysis, JSON-LD validation, entity consistency, sitemap-first content freshness, page-type-aware content audits (KDD 2024 GEO paper), retrieval quality (text-to-HTML ratio + JS dependency + canonical chains), GEO score simulation, citation source analysis, schema generation, hallucination guard for LLM-derived facts, citation-source provenance (which domains the 8 LLMs actually cite you from), prompt-level competitor-gap reports, AI-crawler access-log analysis (which AI bots crawl you, and whether you're blocking them), competitor comparison, and historical trend tracking.
 
 **Most of the 30 tools work without any LLM API key** — zero-cost onboarding.
 
@@ -49,12 +49,14 @@ claude mcp add --transport http geo https://geo.studiomeyer.io/mcp
 npx mcp-remote https://geo.studiomeyer.io/mcp
 ```
 
-## Tools (28)
+## Tools (30)
 
-### Base Tools (7)
+### Base Tools (9)
 | Tool | Description | API Key |
 |------|-------------|:---:|
 | `geo_check` | Full GEO check pipeline across 8 LLM platforms. Optional `samples` (N>1) runs each prompt N times and collapses the draws into one statistically-defensible result + a reproducibility summary (a single LLM query is one stochastic draw, not a measurement). | Yes (1+) |
+| `geo_check_start` | Start a GEO check in the background and get a `jobId` back immediately, for runs that take longer than the MCP client timeout | Yes (1+) |
+| `geo_check_result` | Poll a `geo_check_start` job by its `jobId` for the finished result | No |
 | `geo_discovery_stack` | llms.txt + agents.json + robots.txt + JSON-LD + sitemap + FAQ schema | No |
 | `geo_calculate_score` | Pure scoring function from raw data | No |
 | `geo_platforms` | LLM platform readiness check (8 platforms) | No |
@@ -198,6 +200,18 @@ Then use `/geo_track_over_time` — Claude stores results in Memory and shows tr
 - Built by [StudioMeyer](https://studiomeyer.io) — AI and design studio in Mallorca, working worldwide
 
 ## What's New
+
+**2026-07-31 — v2.12.0 (Model refresh)**
+
+The model list behind the eight platforms was refreshed and retired entries removed.
+
+**2026-07-16 — v2.11.0 (Hardening + one tool count)**
+
+Request-body caps, crash backstops, jittered backoff. The tool and workflow counts reported by `/health` and the landing page now come from the actual registrations instead of being maintained by hand.
+
+**2026-06-28 — v2.8.0 (Model resilience + async job/poll)**
+
+`geo_check_start` and `geo_check_result`: long `mode="search"` runs no longer die on the MCP client timeout — start the check, get a `jobId`, poll for the result.
 
 **2026-06-20 — v2.7.0 (Hardening + Citation/Competitor/Crawler tools + Sampling)**
 
